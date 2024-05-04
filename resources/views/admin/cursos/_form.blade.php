@@ -4,8 +4,7 @@
     <label>Título</label>
 </div>
 <div class="input-field">
-    <input type="text" name="descricao" value="{{ isset($linha->descricao) ? $linha-
->descricao : '' }}">
+    <input type="text" name="descricao" value="{{ isset($linha->descricao) ? $linha->descricao : '' }}">
     <label>Descrição</label>
 </div>
 <div class="input-field">
@@ -29,8 +28,7 @@
 <div class="input-field">
     <p>
         <label>
-            <input type="checkbox" name="publicado" value="checked"
-                {{ isset($linha->publicado) && $linha->publicado == 'sim' ? 'checked' : '' }}>
+            <input type="checkbox" name="publicado" value="{{ isset($linha->publicado) && $linha->publicado == 'sim' ? 'checked' : '' }}">
             <span>Publicar?</span>
         </label>
     </p>

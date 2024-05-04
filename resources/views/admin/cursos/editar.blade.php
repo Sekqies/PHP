@@ -4,7 +4,7 @@
     <div class='container'>
         <h3 class="center">Adicionar curso</h3>
         <div class='row'>
-            <form class="" action="{{route('admin.cursos.atualizar, $linha->id)}}" method='post'
+            <form class="" action="{{route('admin.cursos.atualizar', $linha->id)}}" method='post'
                 enctype="multipart/form-data">
                 {{csrf_field()}}
                 @include('admin.cursos._form')
