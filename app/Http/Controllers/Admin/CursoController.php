@@ -22,13 +22,13 @@ class CursoController extends Controller
         if(isset($dados['publicado'])){
         $dados['publicado'] = 'sim';
         }else{
-        $dados['publicado'] = 'nao';
+        $dados['publicado'] = 'não';
         }
         if($req->hasFile('arquivo')){
         $imagem = $req->file('arquivo');
         $num = rand(1111,9999);
         $dir = "img/cursos/";
-        $ex = $imagem->guessClientExtension();
+        $ex = $imagem->guessClientExtension();  
         $nomeImagem = "imagem_".$num.".".$ex;
         $imagem->move($dir,$nomeImagem);
         $dados['imagem'] = $dir."/".$nomeImagem;
@@ -42,7 +42,7 @@ class CursoController extends Controller
         if(isset($dados['publicado'])){
         $dados['publicado'] = 'sim';
         }else{
-        $dados['publicado'] = 'nao';
+        $dados['publicado'] = 'não';
         }
         if($req->hasFile('arquivo')){
         $imagem = $req->file('arquivo');

@@ -2,7 +2,7 @@
 @section('titulo','Cursos')
 @section('conteudo')
     <div class='container'>
-        <h3 class="center">Adicionar curso</h3>
+        <h3 class="center">Editar curso</h3>
         <div class='row'>
             <form class="" action="{{route('admin.cursos.atualizar', $linha->id)}}" method='post'
                 enctype="multipart/form-data">

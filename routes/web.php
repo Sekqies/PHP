@@ -12,14 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// + 7 bytes
 
-Route::get('/', function () {
-    return view('layout/site');
-});
 
-Route::get('/admin/cursos',
-['as' =>'admin.cursos',
-'uses'=>'App\Http\Controllers\Admin\CursoController@index']);
+Route::get('/',['as' =>'admin.cursos','uses'=>'App\Http\Controllers\Admin\CursoController@index']);
 Route::get('/admin/cursos/adicionar',
 ['as' =>'admin.cursos.adicionar',
 'uses'=>'App\Http\Controllers\Admin\CursoController@adicionar']);

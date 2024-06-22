@@ -17,7 +17,7 @@
                     <td>Ação</td>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id='ricardo'>
                 @foreach($rows as $row)
                 <!-- LOOP PRA LER A TABELA -->
                 <tr>
@@ -26,8 +26,9 @@
                     <td>{{ $row->descricao }}</td>
                     <td>{{ $row->publicado }}</td>
                     <td>{{ $row->valor }}</td>
-                    <td><img src="{{ asset($row->imagem) }}" alt="{{ $row->titulo }}"></td>
                     <td>
+    <img src="{{ isset($row->imagem) ? asset($row->imagem) : asset('img/cursos/placeholder.jpeg') }}" alt="{{ $row->titulo }}">
+</td>                    <td>
                         <!-- COLUNA COM ALTERAR E EXCLUIR -->
                         <a class='btn deep-orange' href="{{ route('admin.cursos.editar',$row->id) }}">Alterar</a>
                         <a class='btn rede' href="{{ route('admin.cursos.excluir',$row->id) }}">Excluir</a>

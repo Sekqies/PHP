@@ -31,7 +31,7 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 |
 */
 
-require __DIR__.'/CRUD_INI3B/vendor/autoload.php';
+require __DIR__.'/crud/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +44,7 @@ require __DIR__.'/CRUD_INI3B/vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/CRUD_INI3B/bootstrap/app.php';
+$app = require_once __DIR__.'/crud/bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 
@@ -53,4 +53,3 @@ $response = $kernel->handle(
 )->send();
 
 $kernel->terminate($request, $response);
-
